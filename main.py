@@ -4,6 +4,7 @@ from driver.driver import create_web_driver
 import tiki.tiki_scraper as tiki_scraper
 import lazada.lazada_scraper as lazada_scraper
 import shopee.shopee_scraper as shopee_scraper
+import amazon.amazon_scraper as amazon_scraper
 from config.input import input_initial_value
 from config.input import add_to_cart
 
@@ -28,6 +29,9 @@ def shopping_online_run(location: str, keyword: str, page: str):
             shopping_online_info.add_product_to_csv(product_info)
         case "lazada":
             product_info = lazada_scraper.get_product_info(soup=soup)
+            shopping_online_info.add_product_to_csv(product_info)
+        case "amazon":
+            product_info = amazon_scraper.get_product_info(soup=soup)
             shopping_online_info.add_product_to_csv(product_info)
         case "shopee":
             is_choose = add_to_cart()

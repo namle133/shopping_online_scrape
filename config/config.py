@@ -31,13 +31,17 @@ class ShoppingOnlineLocation:
                 filter_keyword = filter_string(self.keyword, "-")
                 base_url = "https://www.lazada.vn/tag/{0}/?page={1}".format(filter_keyword, self.page)
                 return base_url
+            case "amazon":
+                filter_keyword = filter_string(self.keyword, "+")
+                base_url = "https://www.amazon.com/s?k={0}&page={1}".format(filter_keyword, self.page)
+                return base_url
             case default:
                 return "we cannot support this"
             
     def add_product_to_csv(self, products):
         ts = get_timestamp()
         with open(
-            './{0}/product_info_in_{1}_{2}.csv'.format("shoping_online/csv/", self.location, ts), 
+            './{0}/product_info_in_{1}_{2}.csv'.format("csv", self.location, ts), 
             "a", encoding="utf-8") as f:
             
             for item in products:
