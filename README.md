@@ -2,7 +2,7 @@
 
 # Overview 📝
 
-# :hammer_and_wrench: Shopping Online Development Procedure (use Tiki & Lazada)
+# :hammer_and_wrench: Shopping Online Development Procedure (use Tiki, Lazada & Amazon)
 
 **Step 1**: clone this repo to PC
 
