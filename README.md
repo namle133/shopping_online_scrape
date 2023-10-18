@@ -65,7 +65,7 @@ please follow the instruction
 
 ### Note:
 
-I use the shopping online which is located in VietNam. Therefore, if you want to crawl the data of the shopping online in foreign country, please change the url and config `shopee_scraper.py `,  `lazada_scraper.py` and `driver.py`
+I use the shopping online which is located in VietNam. Therefore, if you want to crawl the data of the shopping online in foreign country, please change the url and config `shopee_scraper.py `,  `lazada_scraper.py`, `amazon_scraper.py` and `driver.py`
 
 THANK YOU !!!
 
